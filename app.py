@@ -56,10 +56,14 @@ def get_appointments(pid,d):
 #Delete an appointment using the appointment ID
 @app.route('/deleteAppt/<int:aid>', methods=['GET'])
 def delete_Appt(aid):
-  print("IN DELETE")
   conn = sqlite3.connect(sqlite_file)
   c = conn.cursor()
   c.execute('DELETE FROM APPOINTMENT WHERE AID='+str(aid))
+  if c.rowcount == 0:
+    conn.commit()
+    conn.close()
+    jsonObj = {'MESSAGE': "Invalid Appointment ID.",'status':'204'}
+    return json.dumps(jsonObj), 201
   conn.commit()
   conn.close()
   jsonObj = {'DELETED':aid}
