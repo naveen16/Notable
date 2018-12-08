@@ -15,6 +15,20 @@ python app.py
 
 Open browser and point to http://localhost:5000/
 
+Routes to test:
+
+Get all doctors:
+http://localhost:5000/doctors
+
+Get Appointments for a doctor on a date(example below):
+http://localhost:5000/appointments/3/12-10-2018
+
+Create an Appointment:
+http://localhost:5000/appointment
+
+Delete an Appointment(need appiontment id to delete):
+http://localhost:5000/deleteAppt/6
+
 ## Step 3:
 Click “Test Notable Services” button to test the creation of appointments. 
 
