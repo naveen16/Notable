@@ -15,7 +15,16 @@ python app.py
 
 Open browser and point to http://localhost:5000/
 
-Routes to test:
+Routes:
+
+```
+/doctors --> GET
+/appointments/<DocID>/<date> --> GET
+/appointment --> POST
+/deleteAppt/<appID> --> DELETE
+```
+
+Routes to example:
 
 Get all doctors:
 http://localhost:5000/doctors
