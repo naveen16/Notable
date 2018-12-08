@@ -3,7 +3,7 @@ Web services to integrate doctors calendar with Notable.
 ## Step 0
 Clone the repository on your local machine
 ```
-git clone 
+git clone https://github.com/naveen16/Notable.git
 ```
 ## Step 1:
 ```
